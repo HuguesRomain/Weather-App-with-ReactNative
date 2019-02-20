@@ -6,8 +6,8 @@ import Home from './components/Search';
 import { TabNavigator } from './node_modules/react-navigation';
 
 const Tabs = TabNavigator({
-  Search: Search, 
-  About: About,
+  Search: { screen: Search }, 
+  About: { screen: About } 
 }); 
 
 export default class App extends React.Component {
