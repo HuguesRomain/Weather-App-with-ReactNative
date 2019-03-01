@@ -1,19 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import About from './components/About';
 import Search from './components/Search';
-import { TabNavigator } from './node_modules/react-navigation';
+import { createBottomTabNavigator, createStackNavigator, createAppContainer} from 'react-navigation';
 
-const Tabs = TabNavigator({
-  Search: { screen: Search }, 
-  About: { screen: About } 
-}); 
+const FuckingNavigation = createBottomTabNavigator({
+  About: {
+    screen: About
+  },
+  Search: {
+    screen: Search
+  }
+})
+
+const Nav = createAppContainer(FuckingNavigation)
 
 export default class App extends React.Component {
   render() {
     return ( 
-      <Tabs />
+      <View style={{flex: 1}}>
+      <StatusBar hidden={true}/>
+      <Nav />
+      </View>
     );
   }
 }
-  
