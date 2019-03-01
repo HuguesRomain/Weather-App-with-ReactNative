@@ -1,8 +1,10 @@
-import { StyleSheet } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 
-export default StyleSheet.create({
-  button: {
-    backgroundColor: "rgba(46, 204, 113, 1)",
-    color: "white",
-  }
-})
+const styles = StyleSheet.create({
+  container: {
+    margin: 20,
+    borderColor: "grey"
+  },
+});
+
+export default styles;

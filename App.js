@@ -4,7 +4,7 @@ import About from './components/About';
 import Search from './components/Search';
 import { createBottomTabNavigator, createStackNavigator, createAppContainer} from 'react-navigation';
 
-const FuckingNavigation = createBottomTabNavigator({
+const Navigation = createBottomTabNavigator({
   About: {
     screen: About
   },
@@ -13,7 +13,7 @@ const FuckingNavigation = createBottomTabNavigator({
   }
 })
 
-const Nav = createAppContainer(FuckingNavigation)
+const Nav = createAppContainer(Navigation)
 
 export default class App extends React.Component {
   render() {
