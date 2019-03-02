@@ -12,7 +12,18 @@ const Navigation = createBottomTabNavigator({
   Search: {
     screen: Search
   }
-},)
+},{
+  tabBarOptions: {
+  activeBackgroundColor: "#F16E00",
+     style: {
+    backgroundColor: 'rgba(189, 195, 199, 1)',
+     },
+     labelStyle: {
+      fontSize: 20,
+    },
+  },
+  
+})
 
 const Nav = createAppContainer(Navigation)
 
@@ -21,7 +32,7 @@ export default class App extends React.Component {
     return ( 
       <View style={{flex: 1}}>
       <StatusBar hidden={true}/>
-      <Nav style={{color: "red"}}/>
+      <Nav />
       </View>
     );
   }
