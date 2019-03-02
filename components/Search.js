@@ -18,11 +18,11 @@ export default class Home extends React.Component{
     return(
       <View style={styles.container}>
        <TextInput
-        style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+        style={styles.inputs}
         value={this.state.city}
         onChangeText={(text) => this.setCity(text)}
       />  
-      <Button onPress={() => this.submit} title="Research city"/>
+      <Button onPress={() => this.submit} color={styles.button.color} title="Research city"/>
       </View>
     );
   }

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import About from './components/About';
 import Search from './components/Search';
 import { createBottomTabNavigator, createStackNavigator, createAppContainer} from 'react-navigation';
+import styles from "./components/style"
 
 const Navigation = createBottomTabNavigator({
   About: {
@@ -11,7 +12,7 @@ const Navigation = createBottomTabNavigator({
   Search: {
     screen: Search
   }
-})
+},)
 
 const Nav = createAppContainer(Navigation)
 
@@ -20,7 +21,7 @@ export default class App extends React.Component {
     return ( 
       <View style={{flex: 1}}>
       <StatusBar hidden={true}/>
-      <Nav />
+      <Nav style={{color: "red"}}/>
       </View>
     );
   }
