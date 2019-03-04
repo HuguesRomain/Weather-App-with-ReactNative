@@ -1,8 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button} from 'react-native';
 import styles from './style'; 
+import { createStackNavigator } from 'react-navigation'
 
-export default class Home extends React.Component{
+class Search extends React.Component{
   constructor (props){
     super(props)
     this.state = {
@@ -14,6 +15,10 @@ export default class Home extends React.Component{
     this.setState({city})
   }
 
+  handleSubmit () {
+    this.props.Navigation.navigate('result', {city: this.state.city})
+  }
+
   render() {
     return(
       <View style={styles.container}>
@@ -22,8 +27,13 @@ export default class Home extends React.Component{
         value={this.state.city}
         onChangeText={(text) => this.setCity(text)}
       />  
-      <Button onPress={() => this.submit} color={styles.button.color} title="Research city"/>
+      <Button onPress={() => this.Handlesubmit} color={styles.button.color} title="Research city"/>
       </View>
     );
   }
 }
+
+export default SearchStack = createStackNavigator({
+  screen: Search,
+  screen: Search,
+});
