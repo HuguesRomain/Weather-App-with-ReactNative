@@ -2,8 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import About from './components/About';
 import Search from './components/Search';
-import { createBottomTabNavigator, createStackNavigator, createAppContainer} from 'react-navigation';
+import { createBottomTabNavigator, createAppContainer} from 'react-navigation';
 import styles from "./components/style"
+
 
 const Navigation = createBottomTabNavigator({
   About: {
@@ -11,7 +12,8 @@ const Navigation = createBottomTabNavigator({
   },
   Search: {
     screen: Search
-  }
+  },
+ 
 },{
   tabBarOptions: {
   activeBackgroundColor: "#F16E00",
